@@ -1,13 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper';
+import Home from './src/containers/Home';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <PaperProvider>
+      <Home />
+    </PaperProvider>
   );
 }
+
+AppRegistry.registerComponent('app', () => App);
 
 const styles = StyleSheet.create({
   container: {
