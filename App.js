@@ -8,6 +8,7 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import LinkingConfiguration from './navigation/LinkingConfiguration';
+import ScoreboardScreen from './screens/ScoreboardScreen';
 
 const Stack = createStackNavigator();
 
@@ -46,6 +47,7 @@ export default function App(props) {
         <NavigationContainer linking={LinkingConfiguration}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="Scoreboard" component={ScoreboardScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
